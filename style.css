@@ -1,0 +1,229 @@
+/* White-space:no-wrap; to get every text in one line no overflow and moving to next line */
+/* remove.bg to remove teh bg of images and make it png */
+/* // var aud = new Audio("https.mp3") to get the audio outsourced i js   */
+/* scroll-snap-type: y mandatory; it is given to the parent and for the child that is the reel scroll-snap-align:start and scroll-snap-stop:always so this 
+property perfectly gin=ves the space for the second reel to fit in the section perfectly without any crop  */
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+html,body{
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   
+   }
+
+
+/* .outer{
+   height: 300px;
+   width: 300px;
+   background-color: blueviolet;
+}
+
+#inner{
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   background-color: #fff;
+
+}#inner2{
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   background-color: #333;
+
+} */
+/* 
+body{
+   cursor:none;
+}
+
+
+img{
+   height:20px;
+   position:fixed ;
+   transform:translate(-50%,-50%);
+} */
+/* .card{
+   height: 350px;
+   width:300px;
+   text-align: center ;
+   background-color: lightgray;
+   border-radius: 10px;
+} */
+
+ /* button{
+
+      padding: 5px 10px;
+      font-size: 20px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;  
+      /* position: absolute;
+      z-index: 99; */
+/* }  */
+/* 
+button:active{
+   scale:0.9;
+
+}
+
+.main{
+   height: 100%;
+   width: 100%;
+   background-color: #333;
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   flex-direction:column;
+} 
+
+.class{
+    padding:10px 20px;
+   margin:20px 30px;
+
+   display: flex; 
+   gap:210px;
+   width:500px;
+   text-align:center;
+   background-color: gray;
+   */
+/* } */ 
+
+
+main{
+   height: 100vh;
+   width:100%;
+   background:linear-gradient(to right bottom,rgb(26,25,24),rgb(26,25,24),black);
+   padding:20px;}
+   /* overflow:auto;
+}
+
+main::-webkit-scrollbar{
+   display:none;
+} */
+
+
+section{
+   height:100%;
+   width:350px;
+   /* background-color: black; */
+   margin:auto;
+   border-radius:10px;
+   /* overflow: hidden; */
+   /* overflow:auto; */
+}
+
+
+.allReels{
+   height:100%;
+   width:100%;
+   overflow:auto;
+   scroll-snap-type: y mandatory;
+   
+}
+.allReels::-webkit-scrollbar{
+   display: none;
+}
+.reel{
+   height:100%;
+   width:100%;
+   position:relative;
+   /* overflow:hidden; */
+   border-radius: 10px;
+   margin-bottom: 20px;
+   scroll-snap-align: start;
+   scroll-snap-stop:always;
+   
+   
+}
+
+.reel video{
+   height: 100%;
+   width:100%;
+   object-fit:cover;
+   border-radius: 10px;
+   /* overflow:hidden; */
+   position:absolute;
+   top:0;
+   left:0;
+   z-index:1;
+
+}
+
+.reel .bottom{
+   padding:30px 20px;
+   width:100%;
+   background: linear-gradient(rgba(49, 49, 49, 0),rgba(30, 30, 30, 0.074));
+   position:absolute;
+   bottom:0;
+   z-index:9;
+   /* background-color: red; */
+}
+
+.bottom .user img{
+   height:20px;
+   width:20px;
+   object-fit:cover;
+   border-radius:50%;
+}
+.bottom .user{
+   padding:0 ;
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
+  /* color:white; */
+  /* justify-content: center; */
+}
+
+.bottom .user h4{
+   color:rgb(241, 238, 238);
+   font-weight: 500;
+   font-size:15px;
+}
+.bottom .user button{
+   padding:5px 8px;
+   border:2px solid white;
+   border-radius:3px;
+   background-color: transparent;
+   color:white;
+}
+
+.bottom h3{
+   color:white;
+   font-weight: 400;
+}
+
+.right{
+   position:absolute;
+   bottom:15%;
+   right:2%;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   gap:18px;
+   z-index:9;
+}
+
+.right>div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color:white;
+   text-align:center;
+
+}
+.right h4{
+   font-size:30px;
+   font-weight: 300;
+}
+.right h6{
+   font-size:15px;
+   font-weight: 400;
+}
+
