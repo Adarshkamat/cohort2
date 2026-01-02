@@ -110,16 +110,17 @@ const posts = [
     video: "./reels/video1.mp4"
   }
 ];
-
-let sum=''
-posts.forEach(function(elem){
+let allReels = document.querySelector(".allReels")
+function addData(){
+    let sum=''
+posts.forEach(function(elem,idx){
     sum=sum +  `<div class="reel">
                 <video autoplay loop muted src=${elem.video}></video>
                 <div class="bottom">
                     <div class="user">
                         <img src=${elem.profileImg}/>
                         <h4>${elem.profileName}</h4>
-                        <button>
+                        <button class="follow" id=${idx}>
                            ${elem.isFollowed?'Unfollow':'Follow'}
                         </button>
                         
@@ -127,7 +128,7 @@ posts.forEach(function(elem){
                     <h3>${elem.caption} </h3>
                 </div>
                 <div class="right">
-                    <div class="like">
+                    <div id=${idx} class="like">
                         <h4 class="icon like">${elem.isLiked?'<i class="ri-heart-fill">':'<i class="ri-heart-line">'}</i></h4>
                         <h6>${elem.likeCount}</h6>
                     </div>
@@ -147,5 +148,33 @@ posts.forEach(function(elem){
             </div>`
 })
 
-let allReels = document.querySelector(".allReels")
+
 allReels.innerHTML = sum;
+}
+
+addData();
+
+allReels.addEventListener("click",function(dets){
+    
+    if(dets.target.className=="like"){
+        if(!posts[dets.target.id].isLiked){
+            posts[dets.target.id].isLiked = true;
+            posts[dets.target.id].likeCount++;
+        }
+        else{
+             posts[dets.target.id].isLiked = false;
+            posts[dets.target.id].likeCount--;
+        }
+        addData();
+    }
+     if( dets.target.className =="follow"){
+        if(!posts[dets.target.id].isFollowed){
+            posts[dets.target.id].isFollowed = true;
+        }
+        else{
+             posts[dets.target.id].isFollowed = false;
+        }
+        addData();
+    }
+    
+})
