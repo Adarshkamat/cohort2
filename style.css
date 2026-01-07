@@ -1,8 +1,31 @@
-/* White-space:no-wrap; to get every text in one line no overflow and moving to next line */
+White-space:no-wrap; to get every text in one line no overflow and moving to next line
 /* remove.bg to remove teh bg of images and make it png */
 /* // var aud = new Audio("https.mp3") to get the audio outsourced i js   */
 /* scroll-snap-type: y mandatory; it is given to the parent and for the child that is the reel scroll-snap-align:start and scroll-snap-stop:always so this 
 property perfectly gin=ves the space for the second reel to fit in the section perfectly without any crop  */
+
+/* box-shadow: (inset) x y spreadradiuspx rgb iset ot make the shadow in the box and not outside the box not applicable in text-shadow */
+/* text-shadow:x y spreadradiuspx rgb */
+/* background:conic-gradient(red,blue) */
+
+/* @property --bgcolor{
+   syntax:"<color";
+   initial-value:rgb(32,23,42);
+   inherits:false;
+} */
+
+/* can be used as color:vertical9--bgcolor */
+/* 
+@keyframes con{
+   from{
+
+   }
+   to{
+
+   }
+}
+used as animation:con 5s forwards;  */
+
 *{
    margin:0;
    padding:0;
